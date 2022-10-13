@@ -1,0 +1,19 @@
+# email to the user the crontab file belongs to (unless redirected).
+# 
+# For example, you can run a backup of all your user accounts
+# at 5 a.m every week with:
+# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+# 
+# For more information see the manual pages of crontab(5) and cron(8)
+# 
+# m h  dom mon dow   command
+
+#LOCAL
+#0 * * * * docker exec shop_auth_db pg_dump -h localhost -U postgres -Fc "shop" > "backups/shop.dump"
+#0 * * * * docker exec shop_inventory_db pg_dump -h localhost -U postgres -Fc "shop" > "backups/shop.dump"
+#0 * * * * docker exec order_db pg_dump -h localhost -U postgres -Fc "shop" > "backups/shop.dump"
+
+#VOLUMES
+0 * * * * docker exec shop_auth_db pg_dump -h localhost -U postgres -Fc "shop" > "auth-db/db-data/shop.dump"
+0 * * * * docker exec shop_inventory_db pg_dump -h localhost -U postgres -Fc "shop" > "inventory-db/db-data/shop.dump"
+0 * * * * docker exec order_db pg_dump -h localhost -U postgres -Fc "shop" > "order-db-db-data/shop.dump"

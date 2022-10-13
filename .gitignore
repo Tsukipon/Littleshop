@@ -1,0 +1,10 @@
+.idea/
+.env
+node_modules
+nodemon.json
+config
+inventory-db
+auth-db
+order-db
+coverage
+logs

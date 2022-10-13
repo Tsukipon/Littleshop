@@ -1,0 +1,35 @@
+{
+  "name": "MyLittleShopping",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "jest --runInBand --detectOpenHandles --coverage && nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@rendu-git.etna-alternance.net:module-8765/activity-47897/group-950231"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^6.1.2",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2",
+    "jest": "^27.5.1",
+    "jest-cli": "^27.5.1",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.3",
+    "sequelize": "^6.15.0",
+    "supertest": "^6.2.2",
+    "winston": "^3.7.2"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.4.1"
+  }
+}
